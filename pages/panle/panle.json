@@ -1,0 +1,7 @@
+{
+    "usingComponents":
+    {
+        "compage": "/vwx/component/template/",
+        "vwx-panel": "/component/panel/panel"
+    }
+}

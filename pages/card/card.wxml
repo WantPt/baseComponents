@@ -1,0 +1,9 @@
+<vwx-card allCardObj="{{cardObj}}"></vwx-card>
+
+<vwx-card allCardObj="{{cardObj1}}" card_box_content="card_box_content1"></vwx-card>
+
+<vwx-card allCardObj="{{cardObj2}}" card_box_img="card_box_img2" card_box_l_title="card_box_l_title2" card_box_r_title="card_box_r_title2"></vwx-card>
+
+<vwx-card  allCardObj="{{cardObj3}}" card_box_img="card_box_img2" card_box_l_title="card_box_l_title2" card_box_r_title="card_box_r_title3"></vwx-card>
+
+<vwx-card allCardObj="{{cardObj4}}" card_box_l_title="card_box_l_title4" card_box_content="card_box_content4" card_box_foot_r="card_box_foot_r4"></vwx-card>

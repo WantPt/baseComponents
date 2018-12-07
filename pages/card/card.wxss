@@ -1,0 +1,70 @@
+/*总的样式*/
+.card_box_all{
+
+}
+/*图片的样式*/
+.card_box_img{
+
+}
+/*上方左侧文字的样式*/
+.card_box_l_title{
+
+}
+/*上方右侧文字的样式*/
+.card_box_r_title{
+	line-height: 36rpx !important;
+}
+/*上方右侧icon图片的样式*/
+.card_box_r_ico{
+
+}
+/*内容的样式*/
+.card_box_content{
+
+}
+/*最底层文字的样式*/
+.card_box_foot{
+
+}
+/*最低层右侧文字样式*/
+.card_box_foot_r{
+
+}
+
+/*实例用法*/
+.card_box_all{
+	margin-bottom: 50rpx;
+	border-bottom: 2rpx #f0f0f0 solid;
+}
+.card_box_content1{
+	line-height: 48rpx;
+}
+.card_box_l_title2{
+	width: 320rpx;
+}
+.card_box_r_title2{
+	color: #f87001;
+}
+.card_box_img2{
+	width: 180rpx !important;
+	height: 180rpx !important;
+	min-width: 180rpx !important;
+}
+.card_box_r_title3{
+	position: absolute;
+	bottom: -30rpx;
+	left: -0rpx;
+	color: #f87001;
+	line-height: 40rpx;
+}
+.card_box_content4{
+	min-height: 20rpx !important;
+}
+.card_box_l_title4{
+	max-width: 400rpx !important;
+}
+.card_box_foot_r4{
+	width: 200rpx;
+	min-width: 200rpx;
+	height: 50rpx;
+}

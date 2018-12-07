@@ -1,0 +1,4 @@
+
+<picker  class="pickerView" mode="{{pickObj.mode || 'selector'}}" bindchange="pickchange" bindcolumnchange="columnchange" value="{{pickObj.value || 0}}" range="{{pickObj.range || []}}" disabled="{{pickObj.disabled || false}}" start="{{pickObj.start || pickObj.mode=='date'?'1900-01-01':''}}" end="{{pickObj.end || pickObj.mode=='date'?'2020-12-30':''}}" fields="{{pickObj.fields || 'day'}}">
+    <slot></slot>
+</picker>

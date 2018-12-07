@@ -1,0 +1,12 @@
+@import '../../css/weui.wxss';
+.icon-pq-circle:before { content: "\e6fa"; }
+.icon-pq-xuanzhong:before { content: "\e6fb"; }
+.icon-pq-duihao:before { content: "\e6f9"; }
+.weui-cell::before{
+	left:0px;
+}
+.cenFlex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,31 @@
+<view class="panel_box">
+    <view class="panel_box_t_defult weui-cell weui-cell_access  panel_box_t" bindtap="panelBtn" data-data="{{panleData.allData}}" data-type="allData">
+        <view class="weui-cell__hd weui-media-box_appmsg" catchtap="panelBtn" data-data="{{panleData.mainData}}" data-type="mainData">
+            <view class="panel_box_t_l_in_icon weui-media-box_appmsg" wx:if="{{baseClass.mainTitleImg.icon}}">
+                <icon style="size:{{baseClass.mainTitleImg.size || '40'}};color: {{baseClass.mainTitleImg.color || '#999'}};" class="{{baseClass.mainTitleImg.icon}}"></icon>
+            </view>
+            <view class="iconImg panel_box_t_l_img weui-media-box_appmsg" wx:if="{{!baseClass.mainTitleImg.icon && baseClass.mainTitleImg}}">
+                <image src="{{baseClass.mainTitleImg}}"></image>
+            </view>
+            <view class="weui-cell__bd panel_box_t_l_in_txt" style="color:{{baseClass.mainTitleColor || '#333'}}">
+                {{panleTxt[0]}}
+            </view>
+        </view>
+        <view class="weui-cell__bd panel_box_t_l_in_txt"></view>
+        <view class="weui-cell__ft weui-media-box_appmsg" data-data="{{panleData.subData}}" catchtap="panelBtn" data-type="subData">
+            <view class="panel_box_t_r_l" style="color:{{baseClass.subtitleColor || '#333'}}">{{panleTxt[1]}}</view>
+            <view class="panel_box_t_l_in_icon weui-media-box_appmsg" wx:if="{{baseClass.subtitleImg.icon}}">
+                <icon style="size:{{baseClass.subtitleImg.size || '40'}};color: {{baseClass.subtitleImg.color || '#999'}};" class="{{baseClass.subtitleImg.icon}}"></icon>
+            </view>
+            <view class="weui-media-box_appmsg iconImg panel_box_t_r_img" wx:if="{{!baseClass.subtitleImg.icon && baseClass.subtitleImg}}">
+                <image src="{{baseClass.subtitleImg}}"></image>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{baseClass.slotShow==0}}">
+        <slot></slot>
+    </view>
+    <scroll-view scroll-y style="height: {{baseClass.slotHeight || 200}}rpx" wx:if="{{baseClass.slotShow==1}}">
+        <slot></slot>
+    </scroll-view>
+</view>

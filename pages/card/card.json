@@ -1,0 +1,7 @@
+{
+	"usingComponents":
+    {
+        "compage": "/vwx/component/template/",
+        "vwx-card": "/component/card/card"
+    }
+}

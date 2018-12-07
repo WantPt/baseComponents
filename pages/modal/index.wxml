@@ -1,0 +1,26 @@
+<!--pages/modal/index.wxml-->
+<compage id="compage">
+   <view class="page">
+      <view class="page__hd">
+         <view class="page__title">Modal</view>
+         <view class="page__desc">Modal模态框组件</view>
+      </view>
+      <view class="page__bd page__bd_spacing">
+         <view class="kind-list">
+            <block wx:if="{{item.active}}" wx:for="{{list}}" wx:key="id">
+               <view class="kind-list__item">
+                  <navigator url="{{item.id}}/{{item.id}}" id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}">
+                     <view class="weui-flex__item">{{item.name}}</view>
+                     <image class="kind-list__img" src="images/icon_nav_{{item.id}}.png"></image>
+                  </navigator>
+               </view>
+            </block>
+            <view class="kind-list__item">
+               <view class="weui-flex kind-list__item-hd}}" bindtap='openmodal'>
+                  <view class="weui-flex__item">open modal</view>
+               </view>
+            </view>
+         </view>
+      </view>
+   </view>
+</compage>

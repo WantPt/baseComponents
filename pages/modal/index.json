@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "compage": "/vwx/component/template/",
+    "vwx-mulist": "/component/menu/mulist",
+    "vwx-modal": "/component/modal/modal"
+  }
+}

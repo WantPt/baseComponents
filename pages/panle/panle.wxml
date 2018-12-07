@@ -1,0 +1,11 @@
+<compage id="compage">
+	<view class="h2">Panel</view>
+    <vwx-panel panleTxt="{{paneObj.panleTxt}}" baseClass="{{paneObj.baseClass}}" bind:panelBtn="panelBtn" panleData="{{paneObj.panleData}}">
+    	<view class="panel_in" wx:for="{{3}}" wx:key="{{index}}" style="width: 100vw;height: 100rpx;background: #eee;margin-bottom: 2rpx;padding: 30rpx;">我是插入的子内容</view>
+    </vwx-panel>
+	
+    <view class="h2"></view>
+    <vwx-panel panleTxt="{{paneObj1.panleTxt}}" baseClass="{{paneObj1.baseClass}}">
+    	<view class="panel_in" wx:for="{{3}}" wx:key="{{index}}" style="width: 100vw;height: 100rpx;background: #eee;margin-bottom: 2rpx;padding: 30rpx;">我是插入的子内容</view>
+    </vwx-panel>
+</compage>

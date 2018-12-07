@@ -1,0 +1,6 @@
+<!--pages/index.wxml-->
+<compage id="compage">
+   <vwx-mulist menus="{{menus}}" bindmyselect="tapMenu"></vwx-mulist>
+   <view>{{count}}</view>
+   <view>{{vv}}</view>
+</compage>

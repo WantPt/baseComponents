@@ -1,0 +1,13 @@
+<view class="dropd">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell" wx:for="{{dropdownList}}" data-index="{{index}}" wx:key="{{index}}" bindtap="dropdownBtn">
+            <view class="weui-cell__hd cenFlex" wx:if="{{baseConfig.iconImg || item.iconImg}}">
+                <image src="{{item.iconImg || baseConfig.iconImg}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">{{item.title}}</view>
+            <view class="weui-cell__ft">
+            	<icon class="icon-pq-{{item.default&&baseConfig.multiple?'xuanzhong':!item.default&&baseConfig.multiple?'circle':item.default&&!baseConfig.multiple?'duihao':(!item.default&&!baseConfig.multiple) && ''}}" style="color:#{{item.default?baseConfig.iconColor || 'e80012':'999'}};font-size: 30rpx;"></icon>
+            </view>
+        </view>
+    </view>
+</view>

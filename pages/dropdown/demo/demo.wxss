@@ -1,0 +1,6 @@
+.weui-cells{ background-color: #f8f8f8; }
+.weui-cells::after{ border: none; }
+.weui-cell{ background-color: #fff; }
+.weui-cell__ft_in-access-ex::after{ border-width:0 2px 2px 0; }
+.item_cont{ padding: 10px 15px;}
+.item_cont_btn{ margin-top: 20rpx; }

@@ -1,0 +1,18 @@
+<!--pages/modal/normal/normal.wxml-->
+<!--pages/modal/demo/demo.wxml-->
+<compage id="compage">
+  <view class="weui-cells weui-cells_after-title">
+    <view wx:for="{{list}}" wx:key="{{index}}" data-index="{{index}}" bindtap='expand'> 
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access {{curItem == index ? 'weui-cell__ft_in-access-ex' : ''}}"></view>
+      </view>
+      <view wx:if="{{index == curItem}}" class="item_cont">
+        <view class="item_cont_btn" wx:for="{{item.blocks}}" wx:key="{{index}}" wx:for-item="subItem" wx:for-index="subIndex" >
+          <vwx-button type="b" theme="font-r1" text="{{subItem.text}}" data-index="{{subIndex}}" data-params="{{subItem.params}}" catchtap="showModal"></vwx-button>
+        </view>
+      </view>  
+    </view>
+  </view>
+  <vwx-modal id="modal"></vwx-modal>
+</compage>

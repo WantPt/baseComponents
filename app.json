@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/dropdown/demo/demo",
+    "pages/dropdown/index",
+    "pages/indexlist/indexlist",
+    "pages/select/demo/demo",
+    "pages/select/index",
+    "pages/panle/panle",
+    "pages/card/card",
+    "pages/modal/index",
+    "pages/modal/doc/doc",
+    "pages/modal/normal/normal",
+    "pages/modal/demo/demo",
+    "pages/tabs/tab",
+    "pages/button/index",
+    "pages/button/demo/demo"
+  ],
+  "window": {
+    "navigationBarTitleText": "vwx-ptq",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#555555",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "white"
+  },
+  "debug": false
+} 

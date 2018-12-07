@@ -1,0 +1,15 @@
+<compage id="compage">
+    <view class="weui-cells weui-cells_after-title">
+        <view wx:for="{{list}}" wx:key="{{index}}">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-index="{{index}}" bindtap='expand'>
+                <view class="weui-cell__bd">{{item.name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access {{curItem == index ? 'weui-cell__ft_in-access-ex' : ''}}"></view>
+            </view>
+            <view wx:if="{{index == curItem}}" class="item_cont">
+                <view class="item_cont_btn">
+                    <vwx-dropdown dropdownList="{{item.params.dropdownList}}" binddropdownBtn="dropdownBtn" baseConfig="{{item.params.baseConfig}}"></vwx-dropdown>
+                </view>
+            </view>
+        </view>
+    </view>
+</compage>

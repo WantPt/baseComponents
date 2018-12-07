@@ -1,0 +1,19 @@
+@import "../../css/weui.wxss";
+.icon-pq-my:before { content: "\e6f4"; }
+.icon-pq-rightarr:before { content: "\e649"; }
+.iconImg{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10rpx;
+}
+image{
+	width: 100%;
+	height: 100%;
+}
+.panel_box_t_defult{
+	border-bottom: 2rpx #aaa solid;
+	background: #fff;
+}
+.panelClass{
+	border-bottom: 2rpx #aaa solid;
+}

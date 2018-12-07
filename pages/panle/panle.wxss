@@ -1,0 +1,17 @@
+
+.className{
+	color:red;
+	font-size: 40rpx;
+}
+.h2{
+	margin-top: 40rpx;
+	margin-bottom: 20rpx;
+}
+.panel_box_t{
+	/*border-top: 2rpx red solid*/
+}
+.panel_box_t_l_img{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10rpx;
+}

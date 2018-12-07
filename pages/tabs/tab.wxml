@@ -1,0 +1,5 @@
+<!--pages/tabs/tab.wxml-->
+<compage id="compage">
+   <vwx-tab id="tab1" tabs="{{tabs}}" bindmyselect="tapMenu" ></vwx-tab>
+   <vwx-tab tabs="{{[1,2,3,4]}}" actIndex="2"  bindmyselect="tapMenu"></vwx-tab>
+</compage>

@@ -1,0 +1,4 @@
+/* pages/tabs/tab.wxss */
+.vcls .weui-navbar__item{
+   height: 120rpx;
+}

@@ -1,0 +1,3 @@
+/* component/menu/mulist.wxss */
+@import "../../css/weui.wxss";
+.icon-pq-my:before { content: "\e6f4"; }

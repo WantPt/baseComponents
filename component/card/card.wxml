@@ -1,0 +1,41 @@
+<view class="card_box weui-media-box weui-media-box_appmsg card_box_all">
+    <view class="card_box_l card_box_img" wx:if="{{allCardObj.cardImg}}">
+        <image class="weui-media-box__thumb" src="{{allCardObj.cardImg}}"></image>
+    </view>
+    <view class="card_box_r ">
+        <!-- 左侧文字 -->
+        <view class="{{allCardObj.titleTxtLine==1?'weui-media-box__title':'weui-media-box__desc'}} card_box_r_t card_box_l_title">{{allCardObj.titleTxt}}</view>
+        <!-- 右侧文字 -->
+        <view class="weui-media-box_appmsg card_box_r_t_r {{allCardObj.titleTxtR[1]?'line2':'line1'}} card_box_r_title">
+            <view class="card_box_r_t_r_icon card_box_r_ico cenFlex" wx:if="{{allCardObj.titleTxtRImg}}">
+                <image class="weui-media-box__thumb" src="{{allCardObj.titleTxtRImg}}"></image>
+            </view>
+            <view>
+                <view wx:for="{{allCardObj.titleTxtR}}" wx:key="{{index}}">{{item}}</view>
+            </view>
+        </view>
+        <view class="card_box_r_m card_box_content" style="width: {{allCardObj.titleTxtR[0]?'80':'100'}}%">
+            <view wx:for="{{allCardObj.contentTxt}}" wx:key="{{index}}">{{item}}</view>
+        </view>
+        <view class="card_box_r_b sbFlex card_box_foot" wx:if="{{allCardObj.footTxt || footTxtR}}">
+            <view class="card_box_r_b_in">{{allCardObj.footTxt}}</view>
+            <view class="card_box_r_b_r card_box_foot_r">{{allCardObj.footTxtR}}</view>
+        </view>
+        <view class="card_box_r_b sbFlex card_box_foot" wx:if="{{allCardObj.footPriceTxt[0] || footPriceImg}}">
+            <view class="card_box_r_b_in">
+                <view class="card_box_r_b_in_in" wx:for="{{allCardObj.footPriceTxt}}" wx:key="{{index}}">
+                    {{item}}
+                </view>
+            </view>
+            <view class="card_box_r_b_r card_box_foot_r" wx:if="{{allCardObj.footPriceImg}}">
+                <image class="weui-media-box__thumb" src="{{allCardObj.footPriceImg}}"></image>
+            </view>
+        </view>
+        <view class="card_box_r_b sbFlex card_box_foot" wx:if="{{allCardObj.footTxtObj[0].name}}">
+            <view class="card_box_r_b_in">
+                <text wx:for="{{allCardObj.footTxtObj}}" wx:key="{{index}}">{{item.name}}<text style="color: {{item.color || '#333'}}">{{item.num}}</text>
+                </text>
+            </view>
+        </view>
+    </view>
+</view>

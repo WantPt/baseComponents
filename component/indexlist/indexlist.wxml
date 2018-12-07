@@ -1,0 +1,41 @@
+<view class="page__bd" wx:if="{{search}}">
+    <view class="weui-search-bar searchBox">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box icon-pq-sousuo" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search icon-pq-sousuo" size="14"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+            </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+</view>
+<scroll-view scroll-y class="weui-cells searchbar-result searchBox_in" wx:if="{{inputVal.length > 0}}">
+    <view class="weui-cell" wx:for="{{newList}}" wx:key="{{index}}" data-name="{{item}}" bindtap="getData">
+        <view class="weui-cell__bd">
+            <view>{{item}}</view>
+        </view>
+    </view>
+</scroll-view>
+<scroll-view scroll-y class="iList_box" bindscroll="scrollBtn" style="height:{{search?'92.5':'100'}}vh;top: {{search?'7.5':'0'}}vh;" scroll-with-animation scroll-top="{{nowHeight}}">
+    <view class="iList_in" wx:for="{{listArr}}" wx:key="{{index}}" id="a{{item.subtitle || index}}">
+        <view class="iList_in_title title">{{item.maintitle || item.subtitle}}</view>
+        <view class="iList_in_con conter" wx:for="{{item.arr}}" wx:key="{{index}}" data-name="{{item}}" bindtap="getData">
+            {{item}}
+        </view>
+    </view>
+</scroll-view>
+<view class="iList_fiexd" bindtouchmove="fiexdScrollmove">
+    <view class="iList_fiexd_in fiexd" wx:for="{{keyArr}}" data-id="{{item}}" bindtouchstart="fiexdScrollStrat" data-index="{{index}}" wx:key="{{index}}" style="color: #{{nowChangeIndex==index?'e80012':'333333'}}">{{item}}</view>
+</view>
+<view class="fiexd_icon" wx:if="{{fiexd_icon}}">
+    <view class="fiexd_icon_in">
+        {{fiexd_iconTxt}}
+    </view>
+</view>
